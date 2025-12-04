@@ -1,3 +1,10 @@
+﻿---
+layout: default
+title: Frontend Application
+nav_order: 5
+has_children: true
+---
+
 # Frontend Application
 
 > **Relevant source files**

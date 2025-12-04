@@ -1,3 +1,9 @@
+﻿---
+layout: default
+title: TypeScript Configuration
+nav_order: 13
+---
+
 # TypeScript Configuration
 
 > **Relevant source files**

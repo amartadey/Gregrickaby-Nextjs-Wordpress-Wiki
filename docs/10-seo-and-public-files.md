@@ -1,3 +1,9 @@
+﻿---
+layout: default
+title: SEO and Public Files
+nav_order: 11
+---
+
 # SEO and Public Files
 
 > **Relevant source files**

@@ -1,3 +1,10 @@
+﻿---
+layout: default
+title: WordPress Integration
+nav_order: 7
+has_children: true
+---
+
 # WordPress Integration
 
 > **Relevant source files**

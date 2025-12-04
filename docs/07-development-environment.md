@@ -1,3 +1,10 @@
+﻿---
+layout: default
+title: Development Environment
+nav_order: 8
+has_children: true
+---
+
 # Development Environment
 
 > **Relevant source files**
