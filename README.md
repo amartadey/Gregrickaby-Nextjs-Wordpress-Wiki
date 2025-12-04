@@ -1,4 +1,6 @@
-# gregrickaby-nextjs-wordpress-DeepWiki
+# gregrickaby-nextjs-wordpress-Wiki
+
+Original Project Link by Greg Rickaby - [https://github.com/gregrickaby/nextjs-wordpress](https://github.com/gregrickaby/nextjs-wordpress)
 
 ## Content Index
 
