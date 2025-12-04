@@ -1,6 +1,6 @@
 title: Next.js WordPress Documentation
 description: Comprehensive documentation for the Next.js WordPress headless application
-url: https://[username].github.io
+url: https://amartadey.github.io
 baseurl: /gregrickaby-nextjs-wordpress-DeepWiki
 
 # Theme configuration
@@ -70,3 +70,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+
