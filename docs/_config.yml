@@ -23,6 +23,16 @@ search:
 # Enable Mermaid diagrams
 mermaid:
   version: "10.6.1"
+  # Enable zoom and pan
+  initialize: |
+    {
+      startOnLoad: true,
+      theme: 'default',
+      flowchart: {
+        useMaxWidth: false
+      },
+      securityLevel: 'loose'
+    }
 
 # Navigation
 nav_sort: case_insensitive
@@ -70,6 +80,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+
 
 
 
