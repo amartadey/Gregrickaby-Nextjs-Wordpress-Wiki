@@ -1,7 +1,7 @@
 title: Next.js WordPress Documentation
 description: Comprehensive documentation for the Next.js WordPress Starter Template by Greg Rickaby
 url: https://amartadey.github.io
-baseurl: /gregrickaby-nextjs-wordpress-DeepWiki
+baseurl: /Gregrickaby-Nextjs-Wordpress-Wiki
 
 # Theme configuration
 remote_theme: just-the-docs/just-the-docs@v0.10.0
@@ -70,5 +70,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+
 
 
