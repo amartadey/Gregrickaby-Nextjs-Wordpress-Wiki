@@ -7,7 +7,7 @@ baseurl: /Gregrickaby-Nextjs-Wordpress-Wiki
 remote_theme: just-the-docs/just-the-docs@v0.10.0
 
 # Color scheme
-color_scheme: dark
+color_scheme: light
 
 # Enable search
 search_enabled: true
@@ -70,6 +70,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+
 
 
 
