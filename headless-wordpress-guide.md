@@ -871,6 +871,83 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 ---
 
+### Issue 6: WordPress Changes Not Appearing on Frontend
+
+**Symptoms:**
+- Update ACF fields in WordPress
+- Changes don't appear on Next.js frontend immediately
+- Have to wait a long time or hard refresh to see updates
+
+**Cause:** Next.js is caching GraphQL responses
+
+**Explanation:**
+By default, the `fetchGraphQL` function caches responses for 1 hour (3600 seconds):
+
+```javascript
+next: {
+  revalidate: 3600, // Cache for 1 hour
+  tags: ['graphql'],
+}
+```
+
+This is great for production (faster page loads, less server load) but annoying during development.
+
+**Solution for Development:**
+
+Edit `lib/functions.js` and change `revalidate` to `0`:
+
+```javascript
+export async function fetchGraphQL(query, variables = {}) {
+  // ...
+  const response = await fetch(url, {
+    // ...
+    next: {
+      revalidate: 0, // Disable cache for development
+      tags: ['graphql'],
+    },
+  })
+}
+```
+
+**Solution for Production:**
+
+Use environment-based caching:
+
+```javascript
+next: {
+  revalidate: process.env.NODE_ENV === 'production' ? 3600 : 0,
+  tags: ['graphql'],
+}
+```
+
+This way:
+- **Development**: No cache (see changes immediately)
+- **Production**: 1-hour cache (better performance)
+
+**After changing:**
+1. Restart dev server (`Ctrl+C`, then `npm run dev`)
+2. Update WordPress content
+3. Refresh frontend → Changes appear immediately!
+
+**Alternative Solutions:**
+
+1. **Shorter cache duration:**
+   ```javascript
+   revalidate: 60, // Cache for 1 minute
+   ```
+
+2. **Hard refresh in browser:**
+   - Windows/Linux: `Ctrl + Shift + R`
+   - Mac: `Cmd + Shift + R`
+
+3. **Clear Next.js cache:**
+   ```bash
+   rm -rf .next
+   npm run dev
+   ```
+
+---
+
 ## Best Practices
 
 ### 1. Query Optimization
