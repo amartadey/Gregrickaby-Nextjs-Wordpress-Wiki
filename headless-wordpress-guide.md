@@ -352,6 +352,7 @@ export async function fetchGraphQL(query, variables = {}) {
       body: JSON.stringify({ query, variables }),
       next: {
         revalidate: 3600, // Cache for 1 hour
+        // revalidate: 0, // Disable cache for development (set to 3600 for production)
         tags: ['graphql'],
       },
     })
@@ -1175,3 +1176,4 @@ You've learned how to:
 - **Next.js Documentation:** https://nextjs.org/docs
 - **GraphQL Learning:** https://graphql.org/learn
 - **Next.js Image Optimization:** https://nextjs.org/docs/app/building-your-application/optimizing/images
+
